@@ -23,7 +23,7 @@ streamlit run app.py
 You'll need a free Groq API key set as an environment variable or Streamlit secret: `GROQ_API_KEY`.
 
 ## Live Demo
-[Add your Streamlit Cloud link here once deployed]
+[[Add your Streamlit Cloud link here once deployed](https://faq-chatbot-jd5enis5lk8w43s6ssxj3p.streamlit.app/)]
 
 ## Future Improvements
 - Expand the FAQ dataset for broader coverage
