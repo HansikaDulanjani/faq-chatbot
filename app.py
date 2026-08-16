@@ -4,7 +4,6 @@ import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
 from groq import Groq
-import os
 
 st.set_page_config(page_title="Grocery FAQ Bot", page_icon="🛒")
 st.title("🛒 FreshMart FAQ Assistant")
@@ -20,7 +19,7 @@ def load_everything():
     return df, model, index
 
 df, model, index = load_everything()
-client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 def search_faq(user_question, top_k=1):
     query_embedding = model.encode([user_question]).astype('float32')
